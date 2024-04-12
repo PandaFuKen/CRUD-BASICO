@@ -5,10 +5,14 @@ include ("../php/conexion.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Nombres = $_POST['nombres'];
     $Apellidos = $_POST['apellidos'];
+    $Correo = $_POST['correo'];
+    $Semestre = $_POST['semestre'];
     $Carrera = $_POST['carrera'];
+
     
-    if($Nombres != "" && $Apellidos != "" && $Carrera != "") {
-        $sql_insert = "INSERT INTO Maestros (Nombres, Apellidos, Carrera) VALUES ('$Nombres', '$Apellidos', '$Carrera')";
+    
+    if($Nombres != "" && $Apellidos != "" && $Correo != "" && $Semestre != "" && $Carrera) {
+        $sql_insert = "INSERT INTO Alumnos (Nombres, Apellidos, Correo , Semestre , Carrera) VALUES ('$Nombres', '$Apellidos', '$Correo' ,'$Semestre' ,'$Carrera')";
         $result_insert = mysqli_query($conexion, $sql_insert);
         
         if ($result_insert) {
@@ -32,9 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <input type="text" name="nombres" placeholder="Nombres" class="registro">
         <input type="text" name="apellidos" placeholder="Apellidos" class="registro">
-        <input type="text" name="carrera" placeholder="Carrera" class="registro">
+        <input type="text" name="correo" placeholder="Correo" class="registro">
+        <input type="text" name="semestre" placeholder="Semestre" class="registro">
+        <input type="text" name="carrera" placeholder="Carrera" class="registro">    
         <input type="submit" value="Agregar" id="registrar">
     </form>
 </div>
 
-<?php include ("../Paginas/Maestros.php");?>
+<?php include ("../Alumnos/Alumnos.php");?>

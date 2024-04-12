@@ -3,7 +3,7 @@
 
 
 .contenedor-tabla {
-    width: 60%; /* Ajustado el ancho para ocupar más espacio en la página */
+    width: 70%; /* Ajustado el ancho para ocupar más espacio en la página */
     background-color: antiquewhite;
     float: right;
     margin-right: 50px;
@@ -13,7 +13,6 @@
     position: absolute;
     top: 20px;
     right: -30px;
-    
 }
 
 table {
@@ -28,6 +27,5 @@ th, td {
 }
 
 th {
-    text-align: center;
     background-color: #f2f2f2; /* Color de fondo para las cabeceras */
 }
