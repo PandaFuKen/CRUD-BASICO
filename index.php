@@ -8,6 +8,6 @@
 <body>
     <?php include("./Assets/navbar.php");?>
 
-    <h1>hola</h1>
+
 </body>
 </html>
