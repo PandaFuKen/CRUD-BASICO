@@ -1,0 +1,29 @@
+
+.contenedor-sticky {
+    position: sticky;
+    top: 200px;   
+}
+
+.contenedor {
+    width: 30%;
+    height: 52%;
+    background: orange;
+    text-align: center;
+    padding-top: 25px;
+    margin-left: 50px;
+    margin-top: 200px;
+    border-radius: 20px;
+}
+
+.registro {
+    width: 80%; /* Modificado el ancho para que se ajuste mejor al contenedor */
+    height: 12%;
+    margin-bottom: 20px;
+    border-radius: 5px; 
+}
+
+#registrar{
+    width: 30%;
+    height: 10%;
+    margin-top: 10px;
+}
