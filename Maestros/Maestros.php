@@ -28,7 +28,7 @@ $result = mysqli_query($conexion, $sql);
                     <td><?php echo $fila['Carrera']?></td>
                     <td>
                         <a href="../Maestros/editarMaestros.php?id_maestro=<?php echo $fila['id_maestro']?>">Editar</a>
-                        <a href="">Eliminar</a> 
+                        <a href="../Maestros/eliminarMaestros.php?id_maestro=<?php echo $fila['id_maestro']?>">Eliminar</a> 
                     </td>
                 </tr>
             <?php } ?>
