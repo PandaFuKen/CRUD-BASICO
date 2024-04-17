@@ -8,6 +8,8 @@
 <body>
     <?php include("./Assets/navbar.php");?>
 
+    <title>Bienvenido a la pagina de registros</title>
+
 
 </body>
 </html>

@@ -3,6 +3,8 @@
 
 
 <nav class="navbar">
+<title>Registros</title>
+
 <a href="../Maestros/formsMaestro.php">Maestros</a>
 <a href="../Alumnos/formsAlumnos.php">Alumnos</a>
 <a href="/Paginas/Libros.php">Libros</a>

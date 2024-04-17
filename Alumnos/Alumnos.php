@@ -29,8 +29,8 @@ $result = mysqli_query($conexion,$sql);
                 <td><?php echo $fila['Semestre']?></td>
                 <td><?php echo $fila['Carrera']?></td>
                 <td>
-                    <a href="">editar</a>
-                    <a href="">Eliminar</a>
+                    <a href="../Alumnos/editarAlumnos.php?id_alumno=<?php echo $fila ['id_alumno']?>">Editar</a>
+                    <a href="../Alumnos/eliminarAlumnos.php?id_alumno=<?php echo $fila ['id_alumno']?>">Eliminar</a>
                 </td>
                 </tr>
           <?php }?>
