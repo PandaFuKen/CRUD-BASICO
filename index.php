@@ -10,6 +10,10 @@
 
     <title>Bienvenido a la pagina de registros</title>
 
+    <div class="contendor-cartas">
+        
+    </div>
+
 
 </body>
 </html>

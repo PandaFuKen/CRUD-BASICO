@@ -6,7 +6,11 @@ include ("../php/conexion.php");
 $sql = "SELECT * FROM maestros";
 $result = mysqli_query($conexion, $sql);
 ?>
-
+<nav class="regresar">
+ <button>
+    <a href="../Maestros/formsMaestro.php">Regresar</a>
+ </button>
+</nav>
 
 <div class="contenedor-tabla">
     <table>
@@ -27,8 +31,8 @@ $result = mysqli_query($conexion, $sql);
                     <td><?php echo $fila['Apellidos']?></td>
                     <td><?php echo $fila['Carrera']?></td>
                     <td>
-                        <a href="../Maestros/editarMaestros.php?id_maestro=<?php echo $fila['id_maestro']?>">Editar</a>
-                        <a href="../Maestros/eliminarMaestros.php?id_maestro=<?php echo $fila['id_maestro']?>">Eliminar</a> 
+                        <a href="../Maestros/editarMaestros.php?id_maestro=<?php echo $fila['id_maestro']?>"><img src="../IMG/editar.png" alt="" class="editar"></a>
+                        <a href="../Maestros/eliminarMaestros.php?id_maestro=<?php echo $fila['id_maestro']?>"><img src="../IMG/eliminar.png" alt="" class="editar"></a> 
                     </td>
                 </tr>
             <?php } ?>

@@ -2,7 +2,7 @@
 
 <?php
 include("../php/conexion.php");
-$sql = "SELECT*FROM alumnos";
+$sql = "SELECT*FROM grupos";
 $result = mysqli_query($conexion,$sql);
 ?>
 
@@ -28,12 +28,10 @@ $result = mysqli_query($conexion,$sql);
         <tbody>
             <?php while($fila = mysqli_fetch_array($result)) {?> 
                 <tr>
-                <td><?php echo $fila['id_alumno']?></td>
-                <td><?php echo $fila['Nombres']?></td>
-                <td><?php echo $fila['Apellidos']?></td>
-                <td><?php echo $fila['Correo']?></td>
-                <td><?php echo $fila['Semestre']?></td>
+                <td><?php echo $fila['id_grupo']?></td>
                 <td><?php echo $fila['Carrera']?></td>
+                <td><?php echo $fila['Grado']?></td>
+                <td><?php echo $fila['Turno']?></td>
                 <td>
                     <a href="../Alumnos/editarAlumnos.php?id_alumno=<?php echo $fila ['id_alumno']?>"><img src="../IMG/editar.png" alt="" class="editar">Editar</a>
                     <a href="../Alumnos/eliminarAlumnos.php?id_alumno=<?php echo $fila ['id_alumno']?>"><img src="../IMG/eliminar.png" alt="" class="eliminar">Eliminar</a>

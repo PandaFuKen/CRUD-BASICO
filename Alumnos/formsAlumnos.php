@@ -40,7 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="text" name="semestre" placeholder="Semestre" class="registro">
         <input type="text" name="carrera" placeholder="Carrera" class="registro">    
         <input type="submit" value="Agregar" id="registrar">
+        <button>
+            <a href="../Alumnos/Alumnos.php">Ver tabla de registros</a>
+        </button>
     </form>
 </div>
 
-<?php include ("../Alumnos/Alumnos.php");?>
+
