@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="text" name="apellidos" placeholder="Apellidos" class="registro">
         <input type="text" name="carrera" placeholder="Carrera" class="registro">
         <input type="submit" value="Registrar" id="registrar">
+        
          <button class="boton">
         <a href="../Maestros/Maestros.php">Ver tabla de registros</a>
         </button>

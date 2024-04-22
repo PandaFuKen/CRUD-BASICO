@@ -45,4 +45,6 @@ th {
 .regresar{
     width: 100%;
     background-color: #0D47A1;
+    position: sticky;
+    top: 0;
 }
