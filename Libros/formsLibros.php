@@ -3,14 +3,12 @@ include("../Assets/navbar.php");
 include ("../php/conexion.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $Carrera = $_POST['carrera'];
+    $Materia = $_POST['materia'];
+    $Libro = $_POST['libro'];
     $Grado = $_POST['grado'];
-    $Turno = $_POST['turno'];
     
-    
-    
-    if($Carrera != "" && $Grado != "" && $Turno != "" ) {
-        $sql_insert = "INSERT INTO grupos (Carrera, Grado, Turno ) VALUES ('$Carrera', '$Grado', '$Turno')";
+    if($Materia != "" && $Libro != "" && $Grado != "") {
+        $sql_insert = "INSERT INTO libros (Materia, Libro, Grado) VALUES ('$Materia', '$Libro', '$Grado')";
         $result_insert = mysqli_query($conexion, $sql_insert);
         
         if ($result_insert) {
@@ -32,14 +30,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form method="post" class="contenedor">
         <h1 class="Inicio">Registro</h1>
 
-        <input type="text" name="carrera" placeholder="Carrera" class="registro">
+        <input type="text" name="materia" placeholder="Materia" class="registro">
+        <input type="text" name="libro" placeholder="Libro" class="registro">
         <input type="text" name="grado" placeholder="Grado" class="registro">
-        <input type="text" name="turno" placeholder="Turno" class="registro">
-        <input type="submit" value="Agregar" id="registrar">
-        <button>
-            <a href="../Grupos/Grupos.php">Ver tabla de registros</a>
+        <input type="submit" value="Registrar" id="registrar">
+         <button class="boton">
+        <a href="../Libros/Libros.php">Ver tabla de registros</a>
         </button>
     </form>
+         
 </div>
-
 

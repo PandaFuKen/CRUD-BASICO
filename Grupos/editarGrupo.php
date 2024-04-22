@@ -2,8 +2,8 @@
 
 <?php
 include("../php/conexion.php");
-$id2=$_GET['id_alumno'];
-$sql="SELECT*FROM alumnos where id_alumno='".$id2."'";
+$id3=$_GET['id_grupo'];
+$sql="SELECT*FROM grupos where id_grupo='".$id3."'";
 $result=mysqli_query($conexion,$sql);
 
 while($fila=mysqli_fetch_assoc($result)){
@@ -14,12 +14,10 @@ while($fila=mysqli_fetch_assoc($result)){
 <div class="contenedor-sticky">
     <form method="post" class="contenedor">
         <h1 class="Inicio">PERFIL</h1>
-       <input type="hidden" name="id_alumno" value="<?php echo $fila['id_alumno']?>">
-        <input type="text" name="nombres" placeholder="Nombres" class="registro" value="<?php echo $fila['Nombres']?>">
-        <input type="text" name="apellidos" placeholder="Apellidos" class="registro" value="<?php echo $fila['Apellidos']?>">
-        <input type="text" name="correo" placeholder="Correo" class="registro" value="<?php echo $fila['Correo']?>">
-        <input type="text" name="semestre" placeholder="Semestre" class="registro" value="<?php echo $fila['Semestre']?>">
+       <input type="hidden" name="id_grupo" value="<?php echo $fila['id_grupo']?>">
         <input type="text" name="carrera" placeholder="Carrera" class="registro" value="<?php echo $fila['Carrera']?>">
+        <input type="text" name="grado" placeholder="Grado" class="registro" value="<?php echo $fila['Grado']?>">
+        <input type="text" name="turno" placeholder="Turno" class="registro" value="<?php echo $fila['Turno']?>">
         <input type="submit" value="Agregar" id="registrar">
     </form>
     <?php } ?>
@@ -30,22 +28,21 @@ include("../php/conexion.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verificar si se ha enviado un ID de maestro
-    if(isset($_POST['id_alumno'])) {
-        $id_alumno = $_POST['id_alumno'];
-        $Nombres = $_POST['nombres'];
-        $Apellidos = $_POST['apellidos'];
-        $Correo = $_POST['correo'];
-        $Semestre = $_POST['semestre'];
+    if(isset($_POST['id_grupo'])) {
+        $id_grupo = $_POST['id_grupo'];
         $Carrera = $_POST['carrera'];
+        $Grado = $_POST['grado'];
+        $Turno = $_POST['turno'];
         
-        if($Nombres != "" && $Apellidos != "" && $Correo != "" && $Semestre != "" && $Carrera != "") {
+        if($Carrera != "" && $Grado != "" && $Turno != "") {
             // Construir la consulta de actualización
-            $sql_update = "UPDATE alumnos SET Nombres='$Nombres', Apellidos='$Apellidos', Correo='$Correo' , Semestre='$Semestre' , Carrera='$Carrera' WHERE id_alumno=$id_alumno";
+            $sql_update = "UPDATE grupos SET Carrera='$Carrera', Grado='$Grado', Turno='$Turno' WHERE id_grupo=$id_grupo";
             $result_update = mysqli_query($conexion, $sql_update);
             
+           
             if ($result_update) {
                 // Redireccionar al usuario a la misma página después de procesar el formulario
-                header("Location:../Alumnos/Alumnos.php");
+                header("Location:../Grupos/Grupos.php");
                 exit();
             } else {
                 echo "Error al actualizar usuario: " . mysqli_error($conexion);

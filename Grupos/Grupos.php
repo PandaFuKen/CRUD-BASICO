@@ -17,11 +17,9 @@ $result = mysqli_query($conexion,$sql);
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nombres</th>
-                <th>Apellidos</th>
-                <th>Correo</th>
-                <th>Semestre</th>
                 <th>Carrera</th>
+                <th>Grupo</th>
+                <th>Turno</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -33,8 +31,8 @@ $result = mysqli_query($conexion,$sql);
                 <td><?php echo $fila['Grado']?></td>
                 <td><?php echo $fila['Turno']?></td>
                 <td>
-                    <a href="../Alumnos/editarAlumnos.php?id_alumno=<?php echo $fila ['id_alumno']?>"><img src="../IMG/editar.png" alt="" class="editar">Editar</a>
-                    <a href="../Alumnos/eliminarAlumnos.php?id_alumno=<?php echo $fila ['id_alumno']?>"><img src="../IMG/eliminar.png" alt="" class="eliminar">Eliminar</a>
+                    <a href="../Grupos/editarGrupo.php?id_grupo=<?php echo $fila ['id_grupo']?>"><img src="../IMG/editar.png" alt="" class="editar"></a>
+                    <a href="../Grupos/EliminarGrupos.php?id_grupo=<?php echo $fila ['id_grupo']?>"><img src="../IMG/eliminar.png" alt="" class="eliminar"></a>
                 </td>
                 </tr>
           <?php }?>

@@ -35,8 +35,8 @@ $result = mysqli_query($conexion,$sql);
                 <td><?php echo $fila['Semestre']?></td>
                 <td><?php echo $fila['Carrera']?></td>
                 <td>
-                    <a href="../Alumnos/editarAlumnos.php?id_alumno=<?php echo $fila ['id_alumno']?>"><img src="../IMG/editar.png" alt="" class="editar">Editar</a>
-                    <a href="../Alumnos/eliminarAlumnos.php?id_alumno=<?php echo $fila ['id_alumno']?>"><img src="../IMG/eliminar.png" alt="" class="eliminar">Eliminar</a>
+                    <a href="../Alumnos/editarAlumnos.php?id_alumno=<?php echo $fila ['id_alumno']?>"><img src="../IMG/editar.png" alt="" class="editar"></a>
+                    <a href="../Alumnos/eliminarAlumnos.php?id_alumno=<?php echo $fila ['id_alumno']?>"><img src="../IMG/eliminar.png" alt="" class="eliminar"></a>
                 </td>
                 </tr>
           <?php }?>

@@ -7,8 +7,8 @@
 
 <a href="../Maestros/formsMaestro.php">Maestros</a>
 <a href="../Alumnos/formsAlumnos.php">Alumnos</a>
-<a href="/Paginas/Libros.php">Libros</a>
-<a href="/Paginas/Grupos.php">Grupos</a>
+<a href="../Libros/formsLibros.php">Libros</a>
+<a href="../Grupos/formsGrupos.php">Grupos</a>
 
 
 
